@@ -1,4 +1,4 @@
 ---
 type: Page
-title: TitlePagewdwdwd wdwd ef
+title: TitlePagewdwdwd wdwd
 ---
