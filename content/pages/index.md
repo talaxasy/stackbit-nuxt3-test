@@ -1,4 +1,4 @@
 ---
 type: Page
-title: TitlePagewdwdwd wdwd
+title: Title
 ---
