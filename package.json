@@ -5,15 +5,42 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "editorconfig": "editorconfig-checker"
   },
   "devDependencies": {
-    "nuxt": "3.0.0-rc.9"
+    "@iconify-json/mdi": "^1.1.31",
+    "@nuxt/content": "^2.0.1",
+    "@nuxtjs/eslint-config-typescript": "^10.0.0",
+    "@nuxtjs/tailwindcss": "^5.3.1",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/typography": "^0.5.7",
+    "@types/glob": "^7.2.0",
+    "@types/marked": "^4.0.6",
+    "@types/node": "^18.7.6",
+    "autoprefixer": "^10.4.8",
+    "cssgrace": "^3.0.0",
+    "cssnano": "^5.1.12",
+    "editorconfig-checker": "^4.0.2",
+    "eslint": "^8.21.0",
+    "eslint-plugin-nuxt": "^3.2.0",
+    "nuxt": "^3.0.0-rc.11",
+    "postcss-font-magician": "^3.0.0",
+    "postcss-import": "^14.1.0",
+    "postcss-mixins": "^9.0.3",
+    "postcss-preset-env": "^7.7.2",
+    "postcss-simple-vars": "^6.0.3",
+    "postcss-sorting": "^7.0.1",
+    "unplugin-icons": "^0.14.8"
   },
   "dependencies": {
+    "@headlessui/vue": "^1.6.7",
+    "@heroicons/vue": "^1.0.6",
     "front-matter": "^4.0.2",
     "glob": "^8.0.3",
-    "js-yaml": "^4.1.0",
+    "marked": "^4.1.0",
+    "prettier": "^2.7.1",
+    "sass": "^1.54.3",
     "tiny-emitter": "^2.1.0"
   }
 }
