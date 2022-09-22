@@ -5,8 +5,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "editorconfig": "editorconfig-checker"
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
     "@iconify-json/mdi": "^1.1.31",
