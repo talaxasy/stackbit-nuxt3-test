@@ -1,28 +1,64 @@
 <template>
   <main v-if="pending">
     Loading...
-  </main>  
+  </main>
   <main v-else-if="error">
     Error: {{ error }}
   </main>
-  <main v-else :data-sb-object-id="page.__id">
-    <h1 data-sb-field-path="title">{{ page.title }}</h1>
+  <main
+    v-else
+    :data-sb-object-id="
+      page.__id
+    "
+  >
+    <h1
+      data-sb-field-path="title"
+    >
+      {{ page.title }}
+    </h1>
   </main>
 </template>
 
 <script setup lang="ts">
-import { contentChangeEmitter } from "~~/utils/emitter";
+import {contentChangeEmitter} from '~~/utils/emitter';
 
 const route = useRoute();
-const { pending, error, data: page, refresh } = await useAsyncData(() =>
-  $fetch('/api/page', {
+
+const {
+  pending,
+  error,
+  data: page,
+  refresh,
+} = await useFetch(
+  '/api/page',
+  {
+    key:
+      '/' +
+      (
+        [
+          ...route.params
+            .slug,
+        ] || []
+      ).join('/'),
     method: 'post',
-    body: '/' + ([...route.params.slug] || []).join('/'),
-  })
+    body:
+      '/' +
+      (
+        [
+          ...route.params
+            .slug,
+        ] || []
+      ).join('/'),
+  },
 );
 
-contentChangeEmitter.on('change', () => {
-  console.log(`[...slug] Got a content change! refreshing data`);
-  refresh();
-})
+contentChangeEmitter.on(
+  'change',
+  () => {
+    console.log(
+      `[...slug] Got a content change! refreshing data`,
+    );
+    refresh();
+  },
+);
 </script>
